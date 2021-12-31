@@ -1,5 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes as Switch,
+  Route
+} from "react-router-dom";
 
 import Header from './components/Header';
 import Main from './components/Main'
@@ -11,9 +16,13 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Main />
-      <Results />
-      <DetailView/>
+      <Router>
+        <Switch>
+          <Route path="/" element={<Main />}/>
+          <Route path="/recipes/:search" element={<Results />}/>
+          <Route path="/recipe/:id" element={<DetailView/>}/>
+        </Switch>
+      </Router>      
       <Footer/>
     </div>
   );
