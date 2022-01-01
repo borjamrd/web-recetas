@@ -2,7 +2,10 @@ import './component.css';
 
 function DetailView() {
   return (
-    <h1>DetailView</h1>
+    <div className='detailview'>
+      <h1>DetailView</h1>
+    </div>
+    
   );
 }
 
