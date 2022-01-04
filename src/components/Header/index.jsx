@@ -8,26 +8,25 @@ import recipe from './recipes.svg'
 
 
 
+import SearchBar from './SearchBar';
+import logo from './img/logo.png'
+import facebook from './img/facebook.svg'
+import twitter from './img/twitter.svg'
+import insta from './img/insta.svg'
+
 function Header() {
 
   
   return (
-    <header>
-    
-      <SearchBar placeholder="Enter a recipe..." data="" className='searchbar' /* Introducir los datos una vez implementado axios *//>
-
-      <div>New Recipes</div>
-      <div>Popular recipes</div>
-      <img src={recipe} className='main-logo'></img>
-      <h1>Los chicos de Chicote</h1>
-      <div className='social'>
-        <a href="https://www.instagram.com" target="_blank"><img src={instagram} className='socialIcon'></img></a>
-        <a href="https://www.facebook.com" target="_blank" ><img src={facebook} className='socialIcon' ></img></a>
-        <a href="https://www.twitter.com" target='_blank' ><img src={twitter}  className='socialIcon'></img></a>
-      </div>
-        
+    <header className='header'>
+      <SearchBar/>
+      <button>New</button>
+      <button>Popu</button>
+      <img className="logo" src={logo}/>
+      <img className="media" src={facebook} />
+      <img className="media" src={insta} />
+      <img className="media" src={twitter} />
     </header>
-    
   );
 }
 
