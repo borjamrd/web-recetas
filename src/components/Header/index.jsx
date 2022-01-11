@@ -1,13 +1,4 @@
-import { render } from '@testing-library/react';
 import './component.css';
-import facebook from './facebook.svg'
-import instagram from './instagram.svg'
-import twitter from './twitter.svg'
-import React, { useState } from "react";
-import recipe from './recipes.svg'
-
-
-
 import SearchBar from './SearchBar';
 import logo from './img/logo.png'
 import facebook from './img/facebook.svg'
@@ -31,16 +22,3 @@ function Header() {
 }
 
 export default Header;
-
-function SearchBar({placeholder, data}){
-  return (
-    <div className="search">
-      <div className='searchInputs'>
-        <input type="text" placeholder={placeholder}/>
-        <div className='searchIcon'></div>
-      </div>
-      <div className='dataResult'>
-      </div>
-    </div>
-  )
-}

@@ -1,4 +1,6 @@
 import './component.css';
+import React from 'react';
+
 
 function Main() {
   return (

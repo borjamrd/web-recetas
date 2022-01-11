@@ -5,12 +5,14 @@ import {
   Routes as Switch,
   Route
 } from "react-router-dom";
+import ReactGlobe from 'react-globe';
 
 import Header from './components/Header';
 import Main from './components/Main'
 import Results from './components/Results';
 import DetailView from './components/DetailView';
 import Footer from './components/Footer';
+
 
 function App() {
   return (
@@ -23,7 +25,8 @@ function App() {
           <Route path="/recipes/:search" element={<Results />}/>
           <Route path="/recipe/:id" element={<DetailView/>}/>
         </Switch>
-      </Router>    
+      </Router>
+      <ReactGlobe />    
       <Footer/>
     </div>
   );
